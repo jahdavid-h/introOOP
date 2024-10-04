@@ -34,7 +34,7 @@ class Persona:
 
 # Crear una instancia de la clase Persona
 persona1 = Persona("Juan", 23, "Masculino", "Estudiente")
-persona2 = Persona("Victor", 10, "Masculino", "Estudiante")
+persona2 = Persona("Victor", 45, "Masculino", "Estudiante")
 persona3 = Persona("David", 19, "Masculino", "Estudante")
 
 # Usar los métodos de la clase
