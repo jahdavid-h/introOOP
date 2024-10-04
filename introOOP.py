@@ -13,33 +13,44 @@ class Persona:
     def cumplir_anios(self):
         self.edad += 1
         print(f"{self.nombre} ha cumplido años y ahora tiene {self.edad} años.")
+        if self.edad >= 18:
+            print(f"{self.nombre} es mayor de edad.")
+        else:
+            print(f"{self.nombre} es menor de edad.")
 
     def cambiar_ocupacion(self, nueva_ocupacion):
         self.ocupacion = nueva_ocupacion
         print(f"{self.nombre} ahora trabaja como {self.ocupacion}.")
 
     def saludar(self, otra_persona):
-        print(f"{self.nombre} saluda a {otra_persona.nombre}.")
+        print(f"{self.nombre} te manda a saludar {otra_persona.nombre}.")
 
     def mostrar_info(self):
         print(f"Nombre: {self.nombre}, Edad: {self.edad}, Género: {self.genero}, Ocupación: {self.ocupacion}")
 
-    def mandar_saludo(self, nombreOtra):
-        print(f"Hola {self.nombre} saluda a {nombreOtra.nombre}")
-
 # Crear una instancia de la clase Persona
-persona1 = Persona("Juan", 19, "Masculino", "Estudiente")
+persona1 = Persona("Juan", 23, "Masculino", "Estudiente")
+persona2 = Persona("Victor", 10, "Masculino", "Estudiante")
+persona3 = Persona("David", 19, "Masculino", "Estudante")
 
 # Usar los métodos de la clase
+print("\n")
 persona1.presentarse()
 persona1.cumplir_anios()
-persona1.cambiar_ocupacion("Profesor")
+persona1.cambiar_ocupacion("Docente")
 persona1.mostrar_info()
-
-# Crear otra instancia para demostrar el método saludar
-persona2 = Persona("Victor", 10, "Masculino", "Estudiante")
 persona1.saludar(persona2)
-persona2.mandar_saludo(persona1)
+print("\n")
 
-persona3 = Persona("Victor", 10, "Masculino", "Ingeniero")
-persona1.saludar(persona3)
+persona2.presentarse()
+persona2.cumplir_anios()
+persona2.cambiar_ocupacion("Maestro")
+persona2.mostrar_info()
+persona2.saludar(persona3)
+print("\n")
+
+persona3.presentarse()
+persona3.cumplir_anios()
+persona3.cambiar_ocupacion("Ingeniero")
+persona3.mostrar_info()
+persona3.saludar(persona1)
