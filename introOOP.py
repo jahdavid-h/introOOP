@@ -1,3 +1,7 @@
+'''
+Clases
+'''
+
 # Definir la clase Persona
 class Persona:
     def __init__(self, nombre, edad, genero, ocupacion):
